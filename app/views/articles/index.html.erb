@@ -1,0 +1,8 @@
+<ul class="list-unstyled p-5 ms-5">
+<% @articles.each do |article| %>
+  <li>
+    <h2><%= link_to article.title, article_path(article), :class => "text-decoration-none text-info-emphasis" %></h2>
+    <p class="fs-5 text"><%= article.content[..60] %></p>
+  </li>
+<% end %>
+</ul>
